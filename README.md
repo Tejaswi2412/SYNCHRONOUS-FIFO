@@ -53,16 +53,16 @@ Producer                    FIFO                    Consumer
 
 ```
                     ┌─────────────────────────────────────────────┐
-                    │                fifo_top.v                    │
-                    │                                              │
-    clk    ────────→│──→ fifo_ctrl ──wr_addr[2:0]──→ fifo_mem ───│──→ data_out
-    reset  ────────→│         │                  ↑               │
-    wr_en  ────────→│         │    rd_addr[2:0]──┘               │
+                    │                fifo_top.v                   │
+                    │                                             │
+    clk    ────────→│──→ fifo_ctrl ──wr_addr[2:0]──→ fifo_mem ─── │──→ data_out
+    reset  ────────→│         │                  ↑                │
+    wr_en  ────────→│         │    rd_addr[2:0]──┘                │
     rd_en  ────────→│         │    wr_en_mem                      │
     data_in────────→│         │    rd_en_mem                      │
-                    │         │                                    │
+                    │         │                                   │
     full   ←────────│←────────┘ (full, empty flags)               │
-    empty  ←────────│                                              │
+    empty  ←────────│                                             │
                     └─────────────────────────────────────────────┘
 ```
 
